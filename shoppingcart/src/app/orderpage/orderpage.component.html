@@ -1,0 +1,45 @@
+<p>orderpage works!</p>
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ng-container *ngFor="let cart of carts">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">
+                NAME: <strong>{{ cart.name | titlecase }}</strong>
+              </h5>
+              <p class="card-text">
+                ADDRESS: <strong>{{ cart.address }}</strong>
+              </p>
+            </div>
+          </div>
+          <table class="table mb-5">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">Quantity</th>
+                <th scope="col" class="text-right">Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of cart.items">
+                <th scope="row">
+                  <img src="{{ item.img }}" />
+                </th>
+                <td>{{ item.nam | titlecase }}</td>
+                <td>{{ item.prodId }}</td>
+                <td>{{ item.qnt }}</td>
+                <td class="text-right">{{ item.amt * item.qnt }}</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <td colspan="4">&nbsp;</td>
+              <td class="text-right">Total: {{ getCartTotal(cart.items) }}</td>
+            </tfoot>
+          </table>
+        </ng-container>
+      </div>
+    </div>
+  </div>

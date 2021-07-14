@@ -11,6 +11,10 @@ import { PapadComponent } from './papad/papad.component';
 import { SpicesComponent } from './spices/spices.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { ContactusComponent } from './contactus/contactus.component';
+
+import { OrderpageComponent } from './orderpage/orderpage.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -26,7 +30,9 @@ const routes: Routes = [
  {path: 'spices', component: SpicesComponent},
  {path: 'papad', component: PapadComponent},
  {path: 'cart', component: CartComponent},
- {path: '**', redirectTo: 'home'},
+ {path: 'contactus', component: ContactusComponent},
+ {path: 'orderpage', component: OrderpageComponent},
+  {path: '**', redirectTo: 'pagenotfound'},
 ];
 
 
@@ -40,7 +46,10 @@ const routes: Routes = [
       CartComponent,
       HomeComponent,
       LoginComponent,
-      RegisterComponent
+      RegisterComponent,
+     ContactusComponent,
+     OrderpageComponent,
+     PagenotfoundComponent,
   ],
   imports: [
     BrowserModule,

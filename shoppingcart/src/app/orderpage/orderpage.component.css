@@ -1,0 +1,10 @@
+.table td,
+.table th {
+  vertical-align: middle;
+}
+
+.table th[scope='row'] > img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}

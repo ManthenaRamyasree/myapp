@@ -1,0 +1,21 @@
+
+
+input{
+    margin: 5px;
+    width: 300px;
+    border-radius: 5px;
+    padding: 5px;
+    display: block;
+}
+button{
+
+    border-radius: 8px;
+    padding: 8px;
+    margin: 8px;
+    display: block;
+    
+}
+textarea{
+    border-radius: 5px;
+    margin: 5px;
+}

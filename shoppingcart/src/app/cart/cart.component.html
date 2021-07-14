@@ -67,9 +67,10 @@
         <input id="name" type="text" formControlName="name">
        <label for="address"> Address </label>
         <input id="address" type="text" formControlName="address">
-        <button class="button btn-primary" (click)="cartDetail()">Purchase</button>
+        <button class="button btn-primary" (click)="cartDetail()"><a [routerLink]="'/orderpage'">Purchase</a></button>
     </div>
     </div>
       </section>
       
       </form>
+
